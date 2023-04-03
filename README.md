@@ -24,18 +24,76 @@ Another aspect is that the data set should be formatted in such a way that more 
 
 
 ## ALGORITHM:
+```
 Importing the libraries
 Importing the dataset
 Taking care of missing data
 Encoding categorical data
 Normalizing the data
 Splitting the data into test and train
-
+```
 ## PROGRAM:
-/Write your code here/
+```
+import io
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+import pandas as pd
+df = pd.read_csv('Churn_Modelling.csv')
+df.head()
+le=LabelEncoder()
+df["CustomerId"]=le.fit_transform(df["CustomerId"])
+df["Surname"]=le.fit_transform(df["Surname"])
+df["CreditScore"]=le.fit_transform(df["CreditScore"])
+df["Geography"]=le.fit_transform(df["Geography"])
+df["Gender"]=le.fit_transform(df["Gender"])
+df["Balance"]=le.fit_transform(df["Balance"])
+df["EstimatedSalary"]=le.fit_transform(df["EstimatedSalary"])
+X=df.iloc[:,:-1].values
+print(X)
+Y=df.iloc[:,-1].values
+print(Y)
+print(df.isnull().sum())
+df.fillna(df.mean().round(1),inplace=True)
+print(df.isnull().sum())
+y=df.iloc[:,-1].values
+print(y)
+df.duplicated()
+print(df['Exited'].describe())
+scaler= MinMaxScaler()
+df1=pd.DataFrame(scaler.fit_transform(df))
+print(df1)
+x_train,x_test,y_train,x_test=train_test_split(X,Y,test_size=0.2)
+print(x_train)
+print(len(x_train))
+print(x_test)
+print(len(x_test))
+```
 
 ## OUTPUT:
-/ Show the result/
+### Printing first five rows and cols of given dataset:
+![image](https://user-images.githubusercontent.com/94228215/229541074-69e3db1d-6076-478f-ae3b-b0599af08633.png)
+### Seperating x and y values:
+![image](https://user-images.githubusercontent.com/94228215/229542057-0e5c2b18-1b47-480d-94ae-53da7b8b3f84.png)
 
-## RESULT
-/Type your result here/
+### Checking NULL value in the given dataset:
+![image](https://user-images.githubusercontent.com/94228215/229541986-6e613e82-9b28-4bef-8d6a-3c091514b5bd.png)
+
+### Printing the Y column along with its discribtion:
+![image](https://user-images.githubusercontent.com/94228215/229541916-f145d65c-0d08-42ab-9eb9-1ed7512bad8a.png)
+
+### Applyign data preprocessing technique and printing the dataset:
+![image](https://user-images.githubusercontent.com/94228215/229541780-7b4eb179-5afa-4910-b0c6-8eadc941ac54.png)
+![image](https://user-images.githubusercontent.com/94228215/229541809-428a6528-eb63-4515-a5fb-e7167d15be15.png)
+
+### Printing training set:
+![image](https://user-images.githubusercontent.com/94228215/229541705-6a3b51b1-840e-42a6-ab20-4e93c805b2ff.png)
+
+### Printing testing set and length of it:
+![image](https://user-images.githubusercontent.com/94228215/229541645-332a54ad-fe9e-4eaa-9a0d-1a6ec79d3eea.png)
+
+
+## RESULT:
+```Hence the data preprocessing is done using the above code and data has been splitted into trainning and testing data for getting a better model.
+```
