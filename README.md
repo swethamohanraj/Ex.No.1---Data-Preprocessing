@@ -75,7 +75,8 @@ print(len(x_test))
 ### Printing first five rows and cols of given dataset:
 ![image](https://user-images.githubusercontent.com/94228215/229541074-69e3db1d-6076-478f-ae3b-b0599af08633.png)
 ### Seperating x and y values:
-![image](https://user-images.githubusercontent.com/94228215/229542057-0e5c2b18-1b47-480d-94ae-53da7b8b3f84.png)
+![image](https://user-images.githubusercontent.com/94228215/229542411-6256aaaf-76b9-4da4-be93-382f89c4f034.png)
+
 
 ### Checking NULL value in the given dataset:
 ![image](https://user-images.githubusercontent.com/94228215/229541986-6e613e82-9b28-4bef-8d6a-3c091514b5bd.png)
@@ -85,7 +86,7 @@ print(len(x_test))
 
 ### Applyign data preprocessing technique and printing the dataset:
 ![image](https://user-images.githubusercontent.com/94228215/229541780-7b4eb179-5afa-4910-b0c6-8eadc941ac54.png)
-![image](https://user-images.githubusercontent.com/94228215/229541809-428a6528-eb63-4515-a5fb-e7167d15be15.png)
+
 
 ### Printing training set:
 ![image](https://user-images.githubusercontent.com/94228215/229541705-6a3b51b1-840e-42a6-ab20-4e93c805b2ff.png)
