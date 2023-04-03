@@ -96,5 +96,7 @@ print(len(x_test))
 
 
 ## RESULT:
-```Hence the data preprocessing is done using the above code and data has been splitted into trainning and testing data for getting a better model.
+```
+Hence the data preprocessing is done using the above code and data has been splitted into trainning and testing data for getting a better model.
+
 ```
